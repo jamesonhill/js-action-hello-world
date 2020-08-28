@@ -1,0 +1,13 @@
+name: JS action hello world
+description: greeting action
+inputs:
+  who-to-greet:
+    description: name to greet
+    required: true
+    default: test
+outputs:
+  time:
+    description: time of greeting
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
