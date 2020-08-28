@@ -1,0 +1,14 @@
+name: Js action test
+on: [push]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    name: greet & log time
+    steps:
+      - name: action step 1
+        id: hello
+        uses: jamesonhill/js-action-hello-world/@v1
+        with:
+          who-to-greet: 'test js'
+      - name: log time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
